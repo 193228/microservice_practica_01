@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<link rel="stylesheet" href="../css/form.css">
+<body>
+    <div class="container">
+        <form action="/createProfile" method="post" id="signup">
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Imagen</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="imagen" name="imagen" placeholder="Ingrese Url de imagen">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Nombre</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Rol Desempeñado</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="rol" name="rol" placeholder="(estudiante,profesor)">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Institucion</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="institucion" name="institucion" placeholder="Nombre de la Institucion">
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+</body>
+</html>

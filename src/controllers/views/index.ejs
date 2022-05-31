@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservicio</title>
+</head>
+<link rel="stylesheet" href="../css/cards.css">
+<script type="text/javascript" src="../js/contactarse.js"></script>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <% for(let count = 0; count < perfiles.length; count++ ){ %>
+        <div class="card">
+            <% if(perfiles[count].imagen.length>0){ %>
+                <img src="<%= perfiles[count].imagen %>" alt="<%= perfiles[count].nombre %>" style="width:100%">
+              <% } else{ %>  
+                <img src="https://drive.google.com/uc?export=download&id=1oNjYIjGM-hZ11_AMM656zCed2WOlzUQM" alt="Sin Foto" style="width:100%">
+             <% } %>
+            <h1><%= perfiles[count].nombre %></h1>
+            <p class="title"><%= perfiles[count].rol %></p>
+            <p><%= perfiles[count].institucion %></p>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <p><button onclick="contactarPerfil('<%= perfiles[count]._id %>')">Contactar</button></p>
+        </div>
+    <% } %>
+</body>
+</html>
